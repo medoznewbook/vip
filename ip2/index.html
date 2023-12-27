@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #myIframe {
+            width: 100%;
+            height: 100vh;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+<iframe id="myIframe" src="https://www.browserscan.net/webrtc" frameborder="0"></iframe>
+
+<script>
+    function setFullScreen() {
+        var iframe = document.getElementById('myIframe');
+        iframe.style.width = '100%';
+        iframe.style.height = '100vh';
+    }
+
+    // Call setFullScreen when the window is resized
+    window.addEventListener('resize', setFullScreen);
+
+    // Call setFullScreen on page load
+    window.addEventListener('load', setFullScreen);
+</script>
+
+</body>
+</html>
