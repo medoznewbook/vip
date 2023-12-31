@@ -4,12 +4,13 @@ body {
   margin: 0;
   background: #fff;
   color: #000;
-  overflow: hidden; /* Prevent scrollbars due to snowflakes */
+  overflow: hidden; /* Prevent scrolling */
+  height: 100vh; /* Ensure full viewport height */
 }
 
 .snow, .snow:before, .snow:after {
   position: fixed;
-  z-index: 9999; /* Set a high z-index to appear above the content */
+  z-index: 9999;
   content: "";
 }
 
